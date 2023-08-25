@@ -57,7 +57,7 @@
 						<script>
 
 							async function getData() {
-								const apiUrl = "http://nonu5.pythonanywhere.com/";
+								const apiUrl = "https://nonu5.pythonanywhere.com/";
 								const response = await fetch(apiUrl, {
             method: 'GET', 
             headers: {
@@ -104,7 +104,7 @@
 							async function getIpClient() {
 								try {
 									const response = await axios.get('https://api.ipify.org?format=json');
-									const locresponse = await axios.get('http://ip-api.com/json/'+response.data.ip);
+									const locresponse = await axios.get('https://ip-api.com/json/'+response.data.ip);
 									document.getElementById("IPLOCATION").innerHTML = locresponse.data.city+", "+locresponse.data.region + " ("+locresponse.data.lat+", "+locresponse.data.lon+")";
 								} catch (error) {
 									console.error(error);
